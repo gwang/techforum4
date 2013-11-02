@@ -11,11 +11,11 @@ The program is tested with the following settings:
 
 You should see something like the below in the output:
 
-    Fact: Paulis a Person
-    Fact: Peteris a Person
-    Fact: Parkeris a Person
-    Fact: Paulis the grandpa of Peter
-    Fact: Peteris the grandpa of Parker
+    Fact: Paul is a Person
+    Fact: Peter is a Person
+    Fact: Parker is a Person
+    Fact: Paul is the father of Peter
+    Fact: Peter is the father of Parker
     -----------------------------------------------------------------
     Inferred Peter is Parker's grandpa.
     Grandpa Peter gives 5candies to grandson Parker
