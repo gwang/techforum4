@@ -9,7 +9,7 @@ dialect  "mvel"
 rule "Father's father is a grandpa"
     when
         IsFather($p1 : f, $p2 : s)
-        IsFather(f == $p1, $p3: s)
+        IsFather(f == $p2, $p3: s)
     then
         System.out.println("Inferred " + $p1.getName() + " is " + $p3.getName() + "'s grandpa.");
         insertLogical(new IsGrandpa($p1, $p3))
@@ -19,7 +19,7 @@ rule "Grandpa likes to give candies to his grandson"
     when
         IsGrandpa($p1 : gf, $p2 : gs)
     then
-        System.out.println("Grandpa " + $p1.getName() + " gives " + $p1.getCandy() + "candies to grandson " + $p2.getName());
+        System.out.println("Grandpa " + $p1.getName() + " gives " + $p1.getCandy() + " candies to grandson " + $p2.getName());
         modify($p2) { setCandy($p1.candy + $p2.candy)}
         modify($p1) { setCandy(0)}
     end

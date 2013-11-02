@@ -17,7 +17,5 @@ You should see something like the below in the output:
     Fact: Paul is the father of Peter
     Fact: Peter is the father of Parker
     -----------------------------------------------------------------
-    Inferred Peter is Parker's grandpa.
-    Grandpa Peter gives 5candies to grandson Parker
-    Inferred Paul is Peter's grandpa.
-    Grandpa Paul gives 10candies to grandson Peter
+    Inferred Paul is Parker's grandpa.
+    Grandpa Paul gives 10 candies to grandson Parker
