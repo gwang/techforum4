@@ -33,23 +33,20 @@ public class CandyTest {
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 
             // adding facts
-            Person p1 = new Person("Paul", 65, 10);
+            Person p1 = new Person("Paul", 65, 10); ksession.insert(p1);
             System.out.println("Fact: " + p1.getName() + " is a Person");
-            Person p2 = new Person("Peter", 35, 5);
+
+            Person p2 = new Person("Peter", 35, 5); ksession.insert(p2);
             System.out.println("Fact: " + p2.getName() + " is a Person");
-            Person p3 = new Person("Parker", 5, 0);
+
+            Person p3 = new Person("Parker", 5, 0); ksession.insert(p3);
             System.out.println("Fact: " + p3.getName() + " is a Person");
 
-            IsFather isf1 = new IsFather(p1, p2);
+            IsFather isf1 = new IsFather(p1, p2); ksession.insert(isf1);
             System.out.println("Fact: " + p1.getName() + " is the father of " + p2.getName());
-            IsFather isf2 = new IsFather(p2, p3);
-            System.out.println("Fact: " + p2.getName() + " is the father of " + p3.getName());
 
-            ksession.insert(p1);
-            ksession.insert(p2);
-            ksession.insert(p3);
-            ksession.insert(isf1);
-            ksession.insert(isf2);
+            IsFather isf2 = new IsFather(p2, p3); ksession.insert(isf2);
+            System.out.println("Fact: " + p2.getName() + " is the father of " + p3.getName());
 
             System.out.println("-----------------------------------------------------------------");
             ksession.fireAllRules();
